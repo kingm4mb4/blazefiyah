@@ -1,1 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Blaze Fiyah | Official Website</title>
+  <meta name="description" content="Official website of Blaze Fiyah. Music, videos, and new releases.">
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080b08;
+      color: #f5f5ef;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 8%;
+      border-bottom: 1px solid #202820;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #b5e853;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: #b5e853;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      background:
+        radial-gradient(ellipse at center,
+        #20391b 0%, #101a10 38%, #080b08 75%);
+    }
+
+    .hero h1 {
+      font-size: clamp(3.5rem, 12vw, 8rem);
+      font-weight: 900;
+      letter-spacing: -4px;
+      line-height: 1;
+      text-transform: uppercase;
+      text-shadow: 0 0 35px #8bd13a35;
+    }
+
+    .hero h1 span {
+      color: #b5e853;
+    }
+
+    .hero p {
+      margin: 24px 0 32px;
+      color: #c4cbbf;
+      letter-spacing: 5px;
+      font-size: 0.9rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 28px;
+      border: 1px solid #b5e853;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      transition: 0.2s;
+    }
+
+    .button.primary {
+      background: #b5e853;
+      color: #080b08;
+    }
+
+    .button:hover {
+      background: #fff;
+      color: #080b08;
+      border-color: #fff;
+    }
+
+    /* CONTENT SECTIONS */
+    section.content {
+      padding: 75px 8%;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .section-title span {
+      color: #b5e853;
+    }
+
+    .section-description {
+      color: #a7afa2;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      text-align: left;
+    }
+
+    .card {
+      min-height: 190px;
+      padding: 28px;
+      background: #111711;
+      border: 1px solid #273127;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      border-color: #b5e853;
+      transform: translateY(-4px);
+    }
+
+    .card .number {
+      color: #b5e853;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    .card p {
+      color: #a7afa2;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: #101610;
+    }
+
+    .about p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      color: #c4cbbf;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 8%;
+      border-top: 1px solid #202820;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: #899184;
+      font-size: 0.85rem;
+    }
+
+    .socials {
+      display: flex;
+      gap: 18px;
+    }
+
+    .socials a:hover {
+      color: #b5e853;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      nav {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.75rem;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        letter-spacing: 3px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section.content {
+        padding: 55px 7%;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="#" class="logo">BLAZE <span>FIYAH</span></a>
+
+    <nav>
+      <a href="#music">Music</a>
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+      <a href="#connect">Connect</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>BLAZE <span>FIYAH</span></h1>
+      <p>ROOTS. RHYTHM. FIRE.</p>
+
+      <div class="buttons">
+        <a href="#music" class="button primary">Listen Now</a>
+        <a href="#videos" class="button">Watch Videos</a>
+      </div>
+    </section>
+
+    <section class="content" id="music">
+      <h2 class="section-title">The <span>Music</span></h2>
+      <p class="section-description">
+        New sounds. Real roots. More fire on the way.
+      </p>
+
+      <div class="cards">
+        <a href="#" class="card">
+          <span class="number">01 / LISTEN</span>
+          <h3>Latest Release</h3>
+          <p>Discover the latest music.</p>
+        </a>
+
+        <a href="#" class="card">
+          <span class="number">02 / EXPLORE</span>
+          <h3>Discography</h3>
+          <p>Explore the catalog.</p>
+        </a>
+
+        <a href="#" class="card" id="videos">
+          <span class="number">03 / WATCH</span>
+          <h3>Videos</h3>
+          <p>Music videos and visuals.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="content about" id="about">
+      <h2 class="section-title">About <span>Blaze Fiyah</span></h2>
+      <p>
+        Music, culture, and energy. Welcome to the official home
+        of Blaze Fiyah. Stay connected for new releases, videos,
+        and upcoming shows.
+      </p>
+      <a href="#connect" class="button">Stay Connected</a>
+    </section>
+
+    <section class="content" id="connect">
+      <h2 class="section-title">Stay <span>Connected</span></h2>
+      <p class="section-description">
+        Follow the journey. More music and updates coming soon.
+      </p>
+
+      <div class="buttons">
+        <!-- Replace # with your actual profile links -->
+        <a href="#" class="button">Instagram</a>
+        <a href="#" class="button">YouTube</a>
+        <a href="#" class="button">TikTok</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">BLAZE <span>FIYAH</span></a>
+    <p>&copy; 2026 Blaze Fiyah. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+```
